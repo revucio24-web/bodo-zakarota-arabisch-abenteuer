@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#18152e">
+  <meta name="description" content="Ein kleines, spielbares Arabisch-Abenteuer mit Bodo, Zakarota und Lulu.">
+  <title>Bodo &amp; Zakarota — Das Kristallabenteuer</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=20261001-reviewfix-v1">
+  <script src="game.js?v=20261001-reviewfix-v1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#stage-root">Zum Abenteuer springen</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#abenteuerkarte" data-action="home" aria-label="Zur Abenteuerkarte">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 2.8 19.3 12.7 29.2 16l-9.9 3.3L16 29.2l-3.3-9.9L2.8 16l9.9-3.3z"/><circle cx="16" cy="16" r="3.1"/></svg></span>
+        <span class="brand-name">Bodo <span>&amp;</span> Zakarota</span>
+      </a>
+      <div class="topbar-right">
+        <span class="world-tag"><span class="world-dot" aria-hidden="true"></span>Bodos Dorf</span>
+        <span class="progress-pill" id="progress-pill" aria-live="polite">0 von 3 Splittern</span>
+      </div>
+    </header>
+
+    <main id="stage-root" class="stage-root" tabindex="-1"></main>
+
+    <footer class="site-footer">
+      <p class="footer-line"><span class="footer-spark" aria-hidden="true">✦</span> Ein kleines Abenteuer. Dein Lernstand bleibt in diesem Browser.</p>
+      <details class="adult-panel">
+        <summary>Infos für Erwachsene</summary>
+        <div class="adult-copy">
+          <p>Gespeichert werden nur abgeschlossene Abschnitte und höchstens fünf verfehlte Wort-IDs für eine spätere Wiederholung. Namen, Alter, Antworten und Audio werden nicht gespeichert. Es gibt keine Konten, Werbung, Käufe, Analytics oder eigenen Netzwerkaufrufe der App.</p>
+          <p>Vorlesen und optionale Spracherkennung hängen vom Browser und Gerät ab. Die Spracherkennung kann externe Browserdienste nutzen; sie ist freiwillig, startet erst nach Hinweis und Zustimmung und lässt sich abbrechen. Eine Offline-Nutzung wird nicht zugesagt.</p>
+          <div class="clear-controls">
+            <button class="quiet-button" id="clear-request" type="button">Lernstand löschen …</button>
+            <div class="clear-confirm" id="clear-confirm" hidden role="group" aria-label="Lernstand löschen bestätigen">
+              <p>Abgeschlossene Kapitel und die kleine Wiederholungsliste in diesem Browser wirklich löschen?</p>
+              <div class="clear-actions"><button class="danger-button" id="clear-now" type="button">Ja, jetzt löschen</button><button class="quiet-button" id="clear-cancel" type="button">Abbrechen</button></div>
+            </div>
+            <p class="clear-status" id="clear-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </details>
+    </footer>
+  </div>
+</body>
+</html>
